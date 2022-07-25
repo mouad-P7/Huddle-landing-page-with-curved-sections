@@ -62,11 +62,11 @@ main section {
     align-items: center;
     padding: 50px;
 }
-section h1 {
+h1 {
     font-size: 32px;
     font-weight: 900;
 }
-section p {
+p {
     font-size: 17px;
     line-height: 26px;
 }
@@ -79,7 +79,7 @@ main button, form button {
     background-color: var(--Pink);
     color: white;
 }
-section button.get-started {
+button.get-started {
     height: 50px;
     width: 260px;
     border-radius: 25px;
@@ -90,27 +90,27 @@ section button.get-started {
     font-size: 17px;
     box-shadow: 2px 2px 15px rgb(179, 174, 174);
 }
-section button.get-started:hover {
+button.get-started:hover {
     background-color: var(--Light-Pink);
 }
 
 /* first section */
-section.build-community > h1 {
+.build-community > h1 {
     padding-top: 60px;
 }
-section.build-community > p {
+.build-community > p {
     padding-top: 40px;
 }
-section.build-community > img {
+.build-community > img {
     padding-top: 70px;
     padding-bottom: 50px;
 }
-.stats > .stat{ /* .stat selector */
+.stat{ 
     height: 200px;
     width: 250px;
     padding-top: 100px;
 }
-.stats img {
+.stat img {
     width: 40px;
     position: relative;
     right: 75px;
@@ -122,7 +122,9 @@ h2.communities {
 h2.messages {
     font-size: 65px;
 }
-
+.stat p {
+    color: gray;
+}
 
 /* divider1 */
 .divider1 {
@@ -130,30 +132,29 @@ h2.messages {
 }
 
 /* second and third and fourth section */
-section.grow-together, section.your-users {
+.grow-together, .your-users {
     background-color: var(--Very-Pale-Blue);
 }
 .details {
     padding-top: 95px;
 }
-.details > h1 {
+.details h1 {
     font-size: 26px;
     padding-bottom: 20px;
 }
-section.grow-together > img {
-    /*width: 340px;*/
+.grow-together img {
     padding-top: 55px;
 }
-section.folowing-conversations > img {
+.folowing-conversations img {
     padding-top: 120px;
 }
-section.folowing-conversations > .details {
+.folowing-conversations .details {
     padding-bottom: 110px;
 }
-section.your-users > img {
+.your-users img {
     padding-top: 0;
 }
-section.your-users > .details {
+.your-users .details {
     padding-bottom: 100px;
 }
 
@@ -171,10 +172,10 @@ section.your-users > .details {
 
 
 /* fifth section */
-section.ready-to-build-community {
+.ready-to-build-community {
     padding-bottom: 250px;
 }
-section.ready-to-build-community > h1 {
+.ready-to-build-community h1 {
     padding-top: 35px;
 }
 
@@ -196,25 +197,27 @@ footer, footer > section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     padding: 40px 40px 5px 40px;
 }
-footer > section {
+footer {
+    align-items: center; 
+}
+footer section {
     align-items: flex-start;
 }
-section.newsletter {
+.newsletter {
     padding: 40px 0;
 }
-section.newsletter > h1 {
+.newsletter h1 {
     font-size: 25px;
     padding-bottom: 26px;
 }
-section.newsletter > p {
+.newsletter p {
     letter-spacing: 1px;
     line-height: 30px;
     padding-bottom: 40px;
 }
-section.newsletter > form {
+.newsletter form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -237,23 +240,23 @@ button.subscribe {
 button.subscribe:hover {
     background-color: var(--Light-Pink);
 }
-section.contact-us {
+.contact-us {
     padding: 35px 0;
 }
 .white-logo {
     height: 90px;
 }
-.white-logo > img {
+.white-logo img {
     position: relative;
     top: 40px;
 }
-.white-logo > h1 {
+.white-logo h1 {
     font-size: 50px;
     position: relative;
     left: 55px;
     bottom: 20px;
 }
-section.contact-us > p {
+.contact-us p {
     letter-spacing: 1px;
     line-height: 28px;
     padding-top: 10px;
@@ -264,11 +267,11 @@ section.contact-us > p {
     flex-direction: row;
     align-items: flex-start;
 }
-.info > img {
+.info img {
     width: 25px;
     padding: 15px 0;
 }
-.info > p {
+.info p {
     padding: 12px 25px;
 }
 .social-media {
@@ -276,16 +279,271 @@ section.contact-us > p {
     width: 150px;
     padding-top: 50px;
 }
-.social-media > img {
+.social-media img {
     width: 30px;
 }
 
 
 
-/*=================================================*/
-/* Desktop version */
-@media screen and (min-width: 1000px) {
-body {
-    background-color: rgb(202, 193, 193);
+
+/*=========== Desktop version =======================*/
+@media screen and (min-width: 1100px) {
+
+/* Global */
+.divider1, .divider2, .divider3, .divider4, .footer-divider {
+    height: 13.8vw;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
+
+
+/* Header */
+header {
+    padding: 90px 70px 80px 80px;
+}
+img.black-logo {
+    height: 35px;
+    width: 230px;
+}
+button.free-try {
+    height: 40px;
+    width: 140px;
+    border-radius: 30px;
+    font-size: 17px;
+}
+
+
+/* Main content*/
+main {
+    text-align: unset;
+}
+main section {
+    padding: 120px;
+}
+section h1 {
+    font-size: 45px;
+}
+section p {
+    font-size: 18px;
+    line-height: 30px;
+}
+section > img {
+    width: 85%;
+}
+section button.get-started {
+    height: 75px;
+    width: 380px;
+    border-radius: 40px;
+    margin: 40px 0;
+    font-size: 20px;
+}
+
+
+/* first section */
+section.build-community {
+    text-align: center;
+}
+section.build-community > h1 {
+    padding-top: 50px;
+}
+section.build-community > p {
+    padding-top: 40px;
+    width: 550px;
+}
+section.build-community > img {
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+.stats {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 95px;
+    padding-bottom: 50px;
+}
+.stats > .stat{ /* .stat selector */
+    height: unset;
+    width: unset;
+    padding-top: unset;
+}
+.stats img {
+    width: unset;
+    position: relative;
+    right: 85px;
+    top: 6px;  
+}
+h2.communities {
+    font-size: 90px;
+}
+h2.messages {
+    font-size: 85px;
+}
+.stats p {
+    display: inline;
+    font-size: 22px;
+}
+
+
+/* divider1 */
+.divider1 {
+    background-image: url("starter-files/images/bg-section-top-desktop-1.svg");
+}
+
+
+/* second and third and fourth section */
+.grow-together, .folowing-conversations, .your-users {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.grow-together > img, .folowing-conversations > img, .your-users > img {
+    width: 45%;
+}
+.grow-together > img, .your-users > img {
+    order: 2;
+}
+.details {
+    padding-top: unset;
+    width: 46.2%;
+}
+.details > h1 {
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+.details > p {
+    font-size: unset;
+    line-height: unset;
+}
+section.grow-together > img {
+    /*width: 340px;*/
+    padding-top: unset;
+}
+section.folowing-conversations > img {
+    padding-top: unset;
+}
+section.folowing-conversations > .details {
+    padding-bottom: unset;
+}
+section.your-users > img {
+    padding-top: unset;
+}
+section.your-users > .details {
+    padding-bottom: unset;
+}
+
+
+/* divider2 and divider3 and divider4 */
+.divider2 {
+    background-image: url("starter-files/images/bg-section-bottom-desktop-1.svg");
+}
+.divider3 {
+    background-image: url("starter-files/images/bg-section-top-desktop-2.svg");
+}
+.divider4 {
+    background-image: url("starter-files/images/bg-section-bottom-desktop-2.svg");
+}
+
+
+/* fifth section */
+section.ready-to-build-community {
+    padding: 90px;
+}
+section.ready-to-build-community > h1 {
+}
+
+
+/* footer-divider */
+.footer-divider {
+    background-image: url("starter-files/images/bg-footer-top-desktop.svg");
+}
+
+
+/* Footer */
+footer > * > * {
+    width: 100%;
+}
+footer, footer > section {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 40px 5px 40px;
+}
+footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 60px;
+    padding-bottom: 100px;
+}
+footer > section {
+    align-items: flex-start;
+}
+footer p {
+    font-size: 14px;
+}
+section.newsletter {
+    order: 2;
+    padding: 40px 0 40px 110px;
+    width: 50%;
+}
+.newsletter h1 {
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+.newsletter p {
+    line-height: 25px;
+    letter-spacing: unset;
+    padding-bottom: 40px;
+    width: 330px;
+}
+.newsletter form {
+    flex-direction: row;
+    align-items: flex-end;
+}
+input, button.subscribe {
+    border-radius: 6px;
+}
+input {
+    width: 420px;
+    height: 45px;
+}
+button.subscribe {
+    width: 200px;
+    height: 45px;
+    margin: 0px 40px;
+    font-size: 16px;
+}
+button.subscribe:hover {
+    background-color: var(--Light-Pink);
+}
+.contact-us {
+    padding: unset;
+    width: 40%;
+}
+.white-logo {
+    height: 90px;
+}
+.white-logo img {
+    position: relative;
+    top: 40px;
+}
+
+.contact-us > p {
+    padding-top: 14px;
+    padding-bottom: unset;
+    line-height: 25px;
+    letter-spacing: unset;
+    width: 300px;
+}
+.info img {
+    width: 20px;
+    padding-top: 18px;
+}
+.info p {
+    padding: 12px 25px 0 25px;
+}
+.social-media {
+    padding-top: 60px;
+}
+
+
 }
